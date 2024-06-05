@@ -32,7 +32,7 @@ int main() {
     std::cout << "Digite el número de ventas del día: ";
     std::cin >> ventas;
 
-    for (int i = 0; i < ventas; ++i) {
+    for (int i = 0; i < ventas; i++) {
         std::cout << "Ingresa la cantidad de los artículos: ";
         std::cin >> cantidad;
         if (cantidad == 0) {
