@@ -1,4 +1,4 @@
-   #include <iostream>
+#include <iostream>
 #include <cstring>
 
 int main() {
@@ -16,36 +16,39 @@ int main() {
         std::cin >> contra;
 
         if (strcmp(n, "lilian") == 0 && strcmp(contra, "2b38") == 0) {
-            std::cout << "Bienvenido al sistema.\n"; 
+            std::cout << "Bienvenido al sistema.\n";
             break;
         } else {
             intentos--;
             if (intentos > 0) {
-                std::cout << "Nombre de usuario o contraseña incorrectos. Te quedan " << intentos << " intentos.\n";
+                std::cout << "Nombre de usuario o contraseña incorrectas. Te quedan " << intentos << " intentos.\n";
             } else {
                 std::cout << "Se ha superado el número de intentos permitido.\n";
-                break;
+                return 1;
             }
         }
     } while (intentos > 0);
-    std::cout << "Digite el número de ventas del dia:";
+
+    std::cout << "Digite el número de ventas del día: ";
     std::cin >> ventas;
-    for (int i = 0; i < ventas; ++i)
-    
-        std::cout << "Ingresa la cantidad de los artículos: "; 
-        std::cout << "Para terminar, introduce la cantidad de 0 \n\n";
+
+    for (int i = 0; i < ventas; ++i) {
+        std::cout << "Ingresa la cantidad de los artículos: ";
         std::cin >> cantidad;
         if (cantidad == 0) {
-            
+            break; 
         }
-        std::cout << "Ingresa el precio unitario del artículo:\n ";
+
+        std::cout << "Ingresa el precio unitario del artículo: ";
         std::cin >> precioUnitario;
         if (cantidad < 0 || precioUnitario < 0) {
             std::cout << "Lo siento, las cantidades no pueden ser negativas. Ingresa otra cantidad.\n\n";
+            i--; 
         } else {
             total += cantidad * precioUnitario;
         }
-    
+    }
+
     std::cout << "Tu total de los productos es de " << total << " pesos\n";
 
     return 0;
