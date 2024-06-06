@@ -1,23 +1,36 @@
 #include <iostream>
-
+using namespace std
 int main() {
     int num;
 
-    std::cout << "Ingresa el número de tu carta: ";
-    std::cin >> num;
+    cout << "Ingresa el numero de tu carta: ";
+    cin >> num;
 
-    if (num == 1) {
-        std::cout << "Tu carta es As.";
-    } else if (num == 10) {
-        std::cout << "Tu carta es Sota.";
-    } else if (num == 11) {
-        std::cout << "Tu carta es Caballo.";
-    } else if (num == 12) {
-        std::cout << "Tu carta es Rey.";
-    } else if (num >= 2 && num <= 9) {
-        std::cout << "Tu carta no es una figura ni tampoco As.";
-    } else if (num > 12) {
-        std::cout << "Este número no está en la baraja española.";
+    switch(num) {
+        case 1:
+            cout << "Tu carta es As.";
+            break;
+        case 10:
+            cout << "Tu carta es Sota.";
+            break;
+        case 11:
+            cout << "Tu carta es Caballo.";
+            break;
+        case 12:
+            cout << "Tu carta es Rey.";
+            break;
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+            cout << "Tu carta no es una figura ni tampoco As.";
+            break;
+        default:
+            out << "Este no es un numero de una baraja española\n";
     }
 
     return 0;

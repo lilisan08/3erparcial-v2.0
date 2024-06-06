@@ -1,10 +1,10 @@
 #include <iostream>
-
+using namespace std
 int main() {
     int n1, n2, n3;
     
-    std::cout << "Ingrese 3 numeros: ";
-    std::cin >> n1 >> n2 >> n3;
+    cout << "Ingrese 3 numeros: ";
+    cin >> n1 >> n2 >> n3;
     
     if (n1 > n2) {
         int temp = n1;
@@ -22,7 +22,7 @@ int main() {
         n2 = temp;
     }
     
-    std::cout << "Los numeros ordenados de menor a mayor: " << n1 << " " << n2 << " " << n3;
+    cout << "Los numeros ordenados de menor a mayor: " << n1 << " " << n2 << " " << n3;
 
     return 0;
 }
